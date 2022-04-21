@@ -4,10 +4,9 @@ from datetime import datetime
 import requests
 from flask import Flask, render_template
 
+import config
+
 app = Flask(__name__)
-
-API_SECRET_KEY = "6bdd867773aa17a07d1c9eb6ac140b55"
-
 
 def degToCompass(deg):
     val = int((deg / 22.5) + .5)
@@ -30,7 +29,7 @@ def get_turkey():
 def get_weather():
     zip_code = 59718
     country_code = "US"
-    my_url = f"https://api.openweathermap.org/data/2.5/weather?zip={zip_code},{country_code}&units=imperial&appid={API_SECRET_KEY}"
+    my_url = f"https://api.openweathermap.org/data/2.5/weather?zip={zip_code},{country_code}&units=imperial&appid={config.API_SECRET_KEY}"
 
     resp = requests.get(my_url,
                         params={
@@ -51,8 +50,7 @@ def get_5day():
     country_code = "US"
     lat = "45.676998"
     lon = "-111.042931"
-    my_url = f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&units=imperial&appid={API_SECRET_KEY}"
-
+    my_url = f"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&units=imperial&appid={config.API_SECRET_KEY}"
     resp = requests.get(my_url,
                         params={
                         }
