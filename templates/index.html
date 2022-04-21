@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+{% for day in wd %}
+<h3>Date: {{day['dt']}}</h3>
+sunrise: {{day['sunrise']}}<br/>
+sunset: {{day['sunset']}}<br/>
+hi: {{day['temp']['max']}}<br/>
+low: {{day['temp']['min']}}<br/>
+weather: {{day['weather'][0]['description']}}<br/>
+wind speed: {{day['wind_speed']}}<br/>
+wind direction: {{day['wind_dir']}}<br/>
+wind gusts: {{day['wind_gust']}}<br/>
+{% endfor %}
+<h3>data stuff: {{wd}}</h3>
+</body>
+</html>
