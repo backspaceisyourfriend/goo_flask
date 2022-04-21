@@ -12,7 +12,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@main
 
     # Setup gcloud CLI
-    - uses: GoogleCloudPlatform/google-github-actions/setup-gcloud@main
+    - uses: google-github-actions/setup-gcloud@main
       with:
         service_account_email: ${{ secrets.GCP_EMAIL }}
         service_account_key: ${{ secrets.GCP_CREDENTIALS }}
