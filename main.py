@@ -20,11 +20,6 @@ def hello_world():
     return "Hello {}!".format(name)
 
 
-@app.route('/turkey')
-def get_turkey():
-    return "You are a turkey"
-
-
 @app.route('/weather')
 def get_weather():
     zip_code = 59718
