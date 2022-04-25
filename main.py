@@ -64,6 +64,7 @@ def get_5day():
         day['temp']['min'] = round(day['temp']['min'])
         day['wind_gust'] = f"{round(day['wind_gust'])} mph"
         day['wind_dir'] = degToCompass(day['wind_deg'])
+        day['extra'] = "extra stuff"
 
     print(daily_data)
     # using the APIs JSON data, return that to browser
