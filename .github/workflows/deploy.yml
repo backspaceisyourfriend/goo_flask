@@ -24,10 +24,7 @@ jobs:
 
     # cmd line stuff
     - name: Display the path
-        run: |
-        pwd
-        ls
-        shell: bash
+      run: pwd
 
     # Build the Docker image
     - name: Build & Publish
