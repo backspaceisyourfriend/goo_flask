@@ -8,12 +8,10 @@ jobs:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
 
+    # Setup gcloud CLI
     steps:
     - name: Checkout
       uses: google-github-actions/setup-gcloud@main
-
-    # Setup gcloud CLI
-    - uses: google-github-actions/setup-gcloud@main
       with:
         service_account_email: ${{ secrets.GCP_EMAIL }}
         service_account_key: ${{ secrets.GCP_CREDENTIALS }}
