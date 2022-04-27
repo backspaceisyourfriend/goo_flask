@@ -1,5 +1,4 @@
 import os
-import sys
 from datetime import datetime
 import requests
 from flask import Flask, render_template
