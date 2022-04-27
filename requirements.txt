@@ -1,3 +1,5 @@
 flask
 requests
 gunicorn
+google_crc32c
+google-cloud-secret-manager
